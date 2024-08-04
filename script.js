@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fishInBucket.src = './moyaki.gif';
             fishInBucket.classList.add('fish');
 
-            showNotification('You caught a fish!', './moyaki.gif');
+            showNotification('You caught a Moyaki!', './moyaki.gif');
         } else {
             showNotification('No luck this time.<br>Try again!', './moyaki.gif');
         }

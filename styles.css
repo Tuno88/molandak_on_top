@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #87ceeb;
+    margin: 0;
+    /* width: 90vw; */
+    cursor: url('./monad_icon.png') , auto;
+    margin: auto;
+
+}
+#molandak_panel{
+    position: absolute;
+    top: 2vh;
+    left: 3vw;
+    color: red;
+    font-size: x-large;
+    font-size: 3vw;
+}
+#game-container {
+    text-align: center;
+    background: rgb(163, 232, 238);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 90vh;
+}
+
+#fishing-area {
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    margin-top: 20px;
+    border: 2px solid #006994;
+    background: #00bfff;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('./background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#man {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 250px;
+    z-index: 1;
+}
+
+#cast-button {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5vw 2vw;
+    font-size:2vw;
+    z-index: 2;
+    color: #fff;
+    background-color: #66297a;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #9c05a1;}
+
+#cast-button:hover{
+    font-size: 3vw;
+    background-color: #5c3569;
+    cursor: url('./monad_icon.png') , auto;
+
+}
+
+#fish-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fish {
+    position: absolute;
+    width:5vw;
+    height: auto;
+    z-index: 0;
+    transition: transform 0.1s;
+}
+
+#bucket {
+    margin-top: 20px;
+}
+
+#bucket-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid #006994;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(114, 0, 167, 0.8);
+    color: white;
+    padding: 3vw;
+    border-radius: 2vw;
+    font-size: 3vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 100;
+}
+
+#notification img {
+    width: 10vw;
+    height: auto;
+    /* margin-right: 5px; */
+    vertical-align: middle;
+}
+
+
+#notification.show {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .fish {
+        position: absolute;
+        width:15vw;
+        height: auto;
+        z-index: 0;
+        transition: transform 0.1s;
+    }
+    #molandak_panel{
+        position: absolute;
+        top: 2vh;
+        left: 3vw;
+        color: red;
+        font-size: x-large;
+        font-size: 8vw;
+    }
+  }
